@@ -18,10 +18,31 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
     }
   };
 
+  // Shake animation for hover
+  const shakeAnimation = {
+    initial: {},
+    hover: {
+      x: [0, -4, 4, -4, 4, 0],
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut"
+      }
+    }
+  };
+
   return (
     <motion.article 
-      className="portfolio-item bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg interactive transform transition-all duration-500 hover:scale-103 hover:z-10"
+      className="portfolio-item bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg interactive transform transition-all duration-500 hover:z-10"
       variants={itemVariants}
+      animate="visible"
+      initial="hidden"
+      whileHover={{
+        x: [0, -4, 4, -4, 4, 0],
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut"
+        }
+      }}
     >
       <div className="h-64 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-tl from-[#0AFFEF]/20 to-[#8A2BE2]/20 opacity-0 transition-opacity duration-500 ease-in-out z-[1] hover:opacity-100" />

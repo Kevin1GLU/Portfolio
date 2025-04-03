@@ -16,15 +16,29 @@ export default function PortfolioGrid() {
 
   return (
     <section id="portfolio" className="py-20 relative">
+      <motion.div 
+        className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#4169E1]/5 filter blur-3xl"
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+      ></motion.div>
+      
       <div className="container mx-auto px-6">
         <motion.h2 
           className="text-3xl md:text-4xl font-poppins font-bold mb-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
         >
-          Featured <span className="text-[#0AFFEF]">Projects</span>
+          Featured <motion.span 
+            className="text-[#0AFFEF]"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >Projects</motion.span>
         </motion.h2>
         
         <motion.div 
@@ -32,7 +46,7 @@ export default function PortfolioGrid() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           {portfolioItems.map((item) => (
             <PortfolioItem key={item.id} item={item} />

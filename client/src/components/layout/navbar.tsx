@@ -18,8 +18,8 @@ export default function Navbar() {
           <div className="flex justify-between items-center">
             <Link href="/">
               <a className="text-2xl font-poppins font-bold tracking-wide interactive">
-                <span className="text-white">ALEX</span>
-                <span className="text-[#0AFFEF]">STUDIO</span>
+                <span className="text-white">KEVIN'S</span>
+                <span className="text-[#0AFFEF]">PORTFOLIO</span>
               </a>
             </Link>
             

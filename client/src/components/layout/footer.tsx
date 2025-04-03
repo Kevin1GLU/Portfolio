@@ -8,18 +8,53 @@ export default function Footer() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
     >
       <div className="container mx-auto px-6 text-center">
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <Link href="/">
-            <a className="text-2xl font-poppins font-bold tracking-wide interactive">
-              <span className="text-white">ALEX</span>
-              <span className="text-[#0AFFEF]">STUDIO</span>
-            </a>
+            <motion.a 
+              className="text-2xl font-poppins font-bold tracking-wide interactive inline-block"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.span 
+                className="text-white"
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                KEVIN'S
+              </motion.span>
+              <motion.span 
+                className="text-[#0AFFEF]"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                PORTFOLIO
+              </motion.span>
+            </motion.a>
           </Link>
-        </div>
-        <p className="text-gray-500 mt-6">© {new Date().getFullYear()} All Rights Reserved.</p>
+        </motion.div>
+        
+        <motion.p 
+          className="text-gray-500 mt-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          © {new Date().getFullYear()} All Rights Reserved.
+        </motion.p>
       </div>
     </motion.footer>
   );
