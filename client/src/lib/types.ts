@@ -5,3 +5,12 @@ export interface PortfolioItem {
   imageSrc: string;
   alt: string;
 }
+
+export interface ProjectDetail extends PortfolioItem {
+  description: string;
+  videoSrc: string;
+  images: string[];
+  technologies: string[];
+  client?: string;
+  date: string;
+}
