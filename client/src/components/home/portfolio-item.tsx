@@ -18,7 +18,7 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
       VanillaTilt.init(tiltRef.current, {
         max: 15, // maximum tilt rotation (degrees)
         perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets
-        scale: 1.2, // 2 = 200%, 1.5 = 150%, etc. - Exactly as in your example
+        scale: 1.1, // 2 = 200%, 1.5 = 150%, etc.
         speed: 1000, // Speed of the enter/exit transition
         glare: true, // if it should have a "glare" effect
         "max-glare": 0.3, // the maximum "glare" opacity
