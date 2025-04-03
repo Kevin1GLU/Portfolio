@@ -154,43 +154,31 @@ export default function ProjectDetailPage() {
                 }}
               >
                 <div className="relative w-full aspect-video">
-                  {/* Fallback image in case video can't be loaded */}
-                  <img 
-                    src={project.imageSrc} 
-                    alt={project.alt}
-                    className="w-full h-full object-cover absolute top-0 left-0" 
-                  />
-                  
-                  {/* Video with error handling */}
-                  <video 
-                    className="w-full h-full object-cover absolute top-0 left-0 z-10"
-                    controls 
-                    poster={project.imageSrc}
-                    onMouseOver={(e) => {
-                      try {
-                        e.currentTarget.play().catch(() => {
-                          // Silent catch for browsers that block autoplay
-                        });
-                      } catch (error) {
-                        console.log('Video playback error');
-                      }
-                    }}
-                    onMouseOut={(e) => {
-                      try {
-                        e.currentTarget.pause();
-                        e.currentTarget.currentTime = 0;
-                      } catch (error) {
-                        console.log('Video pause error');
-                      }
-                    }}
-                    onError={(e) => {
-                      // Hide video element on error
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  >
-                    <source src={project.videoSrc} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  {project.videoSrc.includes('youtube.com') ? (
+                    <iframe
+                      className="w-full h-full absolute top-0 left-0 z-10"
+                      src={project.videoSrc}
+                      title={project.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <>
+                      <img 
+                        src={project.imageSrc} 
+                        alt={project.alt}
+                        className="w-full h-full object-cover absolute top-0 left-0" 
+                      />
+                      <video 
+                        className="w-full h-full object-cover absolute top-0 left-0 z-10"
+                        controls 
+                        poster={project.imageSrc}
+                      >
+                        <source src={project.videoSrc} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </>
+                  )}
                 </div>
               </motion.div>
 
