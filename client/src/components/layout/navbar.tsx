@@ -19,22 +19,22 @@ export default function Navbar() {
             <Link href="/">
               <a className="text-2xl font-poppins font-bold tracking-wide interactive">
                 <span className="text-white">KEVIN'S</span>
-                <span className="text-[#0AFFEF]">PORTFOLIO</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]">PORTFOLIO</span>
               </a>
             </Link>
             
             <div className="hidden md:flex space-x-8">
               <Link href="#portfolio">
-                <a className="text-white hover:text-[#0AFFEF] transition-colors duration-300 interactive">WORK</a>
+                <a className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">WORK</a>
               </Link>
               <Link href="#about">
-                <a className="text-white hover:text-[#0AFFEF] transition-colors duration-300 interactive">ABOUT</a>
+                <a className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive">ABOUT</a>
               </Link>
               <Link href="#process">
-                <a className="text-white hover:text-[#0AFFEF] transition-colors duration-300 interactive">PROCESS</a>
+                <a className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">PROCESS</a>
               </Link>
               <Link href="#contact">
-                <a className="text-white hover:text-[#0AFFEF] transition-colors duration-300 interactive">CONTACT</a>
+                <a className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive">CONTACT</a>
               </Link>
             </div>
             

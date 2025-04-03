@@ -45,7 +45,7 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
       }}
     >
       <div className="h-64 overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-tl from-[#0AFFEF]/20 to-[#8A2BE2]/20 opacity-0 transition-opacity duration-500 ease-in-out z-[1] hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#4169E1]/30 via-[#9370DB]/20 to-[#FF00FF]/30 opacity-0 transition-opacity duration-500 ease-in-out z-[1] hover:opacity-100" />
         
         <motion.img 
           src={item.imageSrc} 

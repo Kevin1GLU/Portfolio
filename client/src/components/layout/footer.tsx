@@ -34,7 +34,7 @@ export default function Footer() {
                 KEVIN'S
               </motion.span>
               <motion.span 
-                className="text-[#0AFFEF]"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}

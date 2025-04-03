@@ -23,16 +23,22 @@ export default function HeroSection() {
         transition={{ duration: 1.2, delay: 0.1 }}
       >
         <motion.div 
-          className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[#8A2BE2]/10 filter blur-3xl"
+          className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#4169E1]/20 filter blur-3xl"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
         ></motion.div>
         <motion.div 
-          className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#0AFFEF]/10 filter blur-3xl"
+          className="absolute top-40 right-20 w-96 h-96 rounded-full bg-[#9370DB]/20 filter blur-3xl"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
+          transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+        ></motion.div>
+        <motion.div 
+          className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#FF00FF]/15 filter blur-3xl"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
         ></motion.div>
       </motion.div>
       
@@ -59,11 +65,11 @@ export default function HeroSection() {
               Creative
             </motion.span>
             <motion.span 
-              className="block text-[#0AFFEF]"
+              className="block bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
-              style={{ textShadow: '0 0 10px rgba(10, 255, 239, 0.7)' }}
+              style={{ textShadow: '0 0 15px rgba(147, 112, 219, 0.5)' }}
             >
               3D & VFX
             </motion.span>
@@ -101,10 +107,24 @@ export default function HeroSection() {
           >
             <Link href="#portfolio">
               <a 
-                className="interactive inline-block bg-transparent border-2 border-[#0AFFEF] text-[#0AFFEF] px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0AFFEF]/10 hover:shadow-[0_0_15px_rgba(10,255,239,0.7)] transition-all duration-300"
+                className="interactive inline-block bg-transparent border-2 border-[#9370DB] text-white px-8 py-3 rounded-full text-lg font-medium relative overflow-hidden group"
                 onClick={scrollToPortfolio}
+                style={{
+                  backgroundImage: 'linear-gradient(45deg, #4169E1 0%, #9370DB 50%, #FF00FF 100%)',
+                  backgroundSize: '200% 200%',
+                  backgroundPosition: '100% 0',
+                  transition: 'all 0.5s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundPosition = '0 100%';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(147, 112, 219, 0.7)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundPosition = '100% 0';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
-                View Work
+                <span className="relative z-10">View Work</span>
               </a>
             </Link>
           </motion.div>

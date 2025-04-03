@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-[#1a1a1a] relative overflow-hidden">
       <motion.div 
-        className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#4169E1]/10 filter blur-3xl"
+        className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#4169E1]/20 filter blur-3xl"
         initial={{ opacity: 0, scale: 0.5, x: 100 }}
         whileInView={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1.5 }}
@@ -12,7 +12,15 @@ export default function AboutSection() {
       ></motion.div>
       
       <motion.div 
-        className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#0AFFEF]/10 filter blur-3xl"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#9370DB]/15 filter blur-3xl"
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
+        viewport={{ once: true, margin: "-100px" }}
+      ></motion.div>
+      
+      <motion.div 
+        className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#FF00FF]/15 filter blur-3xl"
         initial={{ opacity: 0, scale: 0.5, x: -100 }}
         whileInView={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1.5, delay: 0.3 }}
@@ -36,7 +44,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6 }}
             >
               About <motion.span 
-                className="text-[#0AFFEF]"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -88,10 +96,10 @@ export default function AboutSection() {
                 whileHover={{ y: -5, scale: 1.05 }}
               >
                 <motion.div 
-                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#0AFFEF]/20"
-                  whileHover={{ boxShadow: "0 0 15px rgba(10, 255, 239, 0.5)" }}
+                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#4169E1]/20"
+                  whileHover={{ boxShadow: "0 0 15px rgba(65, 105, 225, 0.5)" }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#0AFFEF]" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#4169E1]" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                   </svg>
                 </motion.div>
@@ -107,10 +115,10 @@ export default function AboutSection() {
                 whileHover={{ y: -5, scale: 1.05 }}
               >
                 <motion.div 
-                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#8A2BE2]/20"
-                  whileHover={{ boxShadow: "0 0 15px rgba(138, 43, 226, 0.5)" }}
+                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#9370DB]/20"
+                  whileHover={{ boxShadow: "0 0 15px rgba(147, 112, 219, 0.5)" }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#8A2BE2]" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#9370DB]" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                   </svg>
                 </motion.div>
@@ -145,10 +153,10 @@ export default function AboutSection() {
                 whileHover={{ y: -5, scale: 1.05 }}
               >
                 <motion.div 
-                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#0AFFEF]/20"
-                  whileHover={{ boxShadow: "0 0 15px rgba(10, 255, 239, 0.5)" }}
+                  className="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#FF00FF]/20"
+                  whileHover={{ boxShadow: "0 0 15px rgba(255, 0, 255, 0.5)" }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#0AFFEF]" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#FF00FF]" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
                   </svg>
                 </motion.div>
