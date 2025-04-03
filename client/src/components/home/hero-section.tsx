@@ -125,7 +125,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             >
-              Creative
+              Kevins
             </motion.span>
             <motion.span 
               className="block bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
@@ -133,14 +133,6 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
               style={{ textShadow: '0 0 15px rgba(147, 112, 219, 0.5)' }}
-            >
-              3D & VFX
-            </motion.span>
-            <motion.span 
-              className="block"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.0, duration: 0.8, ease: "easeOut" }}
             >
               Portfolio
             </motion.span>
@@ -156,7 +148,7 @@ export default function HeroSection() {
               ease: [0.16, 1, 0.3, 1] 
             }}
           >
-            Bringing imagination to life through cutting-edge 3D modeling and visual effects
+            A showcase of creative 3D and visual effects work
           </motion.p>
           
           <motion.div
