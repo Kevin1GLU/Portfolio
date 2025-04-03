@@ -66,13 +66,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Racing Visualization",
     imageSrc: extremeEThumb,
     alt: "Extreme E Racing Project"
-  },
-  {
-    id: 9,
-    title: "Motion Graphics",
-    category: "UI Animation",
-    imageSrc: arcaneThumb,
-    alt: "Motion Graphics UI Animation"
   }
 ];
 
