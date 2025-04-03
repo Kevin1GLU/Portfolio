@@ -78,7 +78,7 @@ export const projectDetails: ProjectDetail[] = [
     imageSrc: arcaneThumb,
     alt: "Virtual Set Project",
     description: "Virtual Set is a fully realized 3D environment designed for a fantasy TV series. This project focused on creating a magical realm with atmospheric lighting, detailed architecture, and immersive visual storytelling elements. The environment was designed to be versatile, allowing for different camera angles and seamless integration with live-action elements.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-city-traffic-lights-in-the-rain-4335-large.mp4",
+    videoSrc: "https://www.youtube.com/embed/InWOXlqGquM",
     images: [
       arcaneThumb,
       "https://images.unsplash.com/photo-1599802737316-461c7a8ae9de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
