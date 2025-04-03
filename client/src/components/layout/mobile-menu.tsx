@@ -110,14 +110,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </motion.div>
             
             <motion.div variants={itemVariants}>
-              <Link href="#process">
-                <a onClick={() => handleLinkClick('#process')} className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">
-                  PROCESS
-                </a>
-              </Link>
-            </motion.div>
-            
-            <motion.div variants={itemVariants}>
               <Link href="#contact">
                 <a onClick={() => handleLinkClick('#contact')} className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive">
                   CONTACT

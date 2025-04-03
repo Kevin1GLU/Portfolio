@@ -30,9 +30,6 @@ export default function Navbar() {
               <Link href="#about">
                 <a className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive">ABOUT</a>
               </Link>
-              <Link href="#process">
-                <a className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">PROCESS</a>
-              </Link>
               <Link href="#contact">
                 <a className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive">CONTACT</a>
               </Link>
