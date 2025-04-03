@@ -108,15 +108,14 @@ export const projectDetails: ProjectDetail[] = [
     category: "3D Environment",
     imageSrc: factoryThumb,
     alt: "Robot Factory Environment",
-    description: "Robot Factory is a detailed industrial environment created for a sci-fi game. This sprawling facility features automated assembly lines, robotic workers, and advanced machinery in a near-future setting. The environment balances functional industrial design with visual storytelling elements that hint at the world's technological development.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-blue-lights-30609-large.mp4",
+    description: "This is a project I made during the first year of my studies. The idea was to create a looping video of a robot factory in Unity, so that, as a class, we could have a long video for the school's open day.\n\nIt was a solo project, so I modeled, rigged, and animated everything in Maya. I also did the texturing in Substance Painter. In Unity, I assembled the scene, added some post-processing, and added some particles.",
+    videoSrc: "https://www.youtube.com/embed/IahaNhiPxjE",
     images: [
       factoryThumb,
       "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Blender", "Substance Designer", "Unreal Engine", "Redshift"],
-    client: "Futuristic Games",
+    technologies: ["Unity", "Maya", "Substance Painter"],
     date: "June 2023"
   },
   {
