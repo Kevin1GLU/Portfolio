@@ -81,8 +81,8 @@ export const projectDetails: ProjectDetail[] = [
     videoSrc: "https://www.youtube.com/embed/InWOXlqGquM",
     images: [
       arcaneThumb,
-      "/src/assets/ue_nodes_virtualset.png",
-      "/src/assets/ue_nodes2_virtualset.png"
+      "/attached_assets/ue_nodes_virtualset.png",
+      "/attached_assets/ue_nodes2_virtualset.png"
     ],
     technologies: ["Blender", "Unreal Engine", "Substance Painter", "Photoshop"]
   },
