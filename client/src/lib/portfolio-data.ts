@@ -124,15 +124,14 @@ export const projectDetails: ProjectDetail[] = [
     category: "VFX Composition",
     imageSrc: invasionThumb,
     alt: "Invasion VFX Project",
-    description: "Invasion is a VFX sequence created for a science fiction film depicting an alien invasion of Earth. This complex compositing project integrates 3D elements with live-action footage to create a believable and dramatic extraterrestrial encounter. The work involved particle effects, motion tracking, atmospheric integration, and digital destruction elements.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-flying-over-a-luminous-spaceship-29848-large.mp4",
+    description: "This is a project I worked on alone. We got to choose what we wanted to work on in school, so I chose to work in Unreal Engine to gain more experience with it.\n\nIn this project, I had the idea of a city being attacked by aliens. I used a city map from Unreal and added a spaceship model to it. I created a few shots and animated the rockets using splines. Then I made a PNG sequence of a kind of monster, which I also placed in the scene, and finally added some sound effects and did post-processing in After Effects.",
+    videoSrc: "https://www.youtube.com/embed/mcSA92lROPw",
     images: [
       invasionThumb,
       "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Nuke", "Houdini", "After Effects", "Maya"],
-    client: "Universal Pictures",
+    technologies: ["Blender", "Unreal Engine", "After Effects"],
     date: "August 2023"
   },
   {
