@@ -31,4 +31,37 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
+  
+  /* VanillaTilt enhanced styles */
+  .js-tilt {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    will-change: transform;
+    transition: all 400ms ease;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .js-tilt:hover {
+    box-shadow: 0 20px 40px -10px rgba(65, 105, 225, 0.3);
+  }
+  
+  /* For tilt glare effect */
+  .js-tilt-glare {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .js-tilt-glare-inner {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+  }
 }

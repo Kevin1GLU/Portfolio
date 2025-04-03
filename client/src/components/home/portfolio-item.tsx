@@ -1,49 +1,41 @@
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { PortfolioItem as PortfolioItemType } from '@/lib/types';
-import { useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'wouter';
+import VanillaTilt from 'vanilla-tilt';
 
 interface PortfolioItemProps {
   item: PortfolioItemType;
 }
 
 export default function PortfolioItem({ item }: PortfolioItemProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  
-  // Mouse position for parallax effect
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  
-  // Transform values for parallax tilt
-  const rotateX = useTransform(y, [-100, 100], [10, -10]);
-  const rotateY = useTransform(x, [-100, 100], [-10, 10]);
-  
-  // Transform values for inner content
-  const imgX = useTransform(x, [-100, 100], [-15, 15]);
-  const imgY = useTransform(y, [-100, 100], [-15, 15]);
-  
-  // Handle mouse move for parallax effect
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
-    
-    const rect = ref.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const mouseX = e.clientX - centerX;
-    const mouseY = e.clientY - centerY;
-    
-    x.set(mouseX);
-    y.set(mouseY);
-  };
-  
-  // Reset on mouse leave
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-    setIsHovered(false);
-  };
+  const tiltRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Initialize vanilla-tilt effect when component mounts
+  useEffect(() => {
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, {
+        max: 15, // maximum tilt rotation (degrees)
+        perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets
+        scale: 1.2, // 2 = 200%, 1.5 = 150%, etc. - Exactly as in your example
+        speed: 1000, // Speed of the enter/exit transition
+        glare: true, // if it should have a "glare" effect
+        "max-glare": 0.3, // the maximum "glare" opacity
+        gyroscope: false, // disable gyroscope for cleaner effect on desktop
+        reset: true, // whether the tilt should reset when mouse leaves
+        easing: "cubic-bezier(.03,.98,.52,.99)", // easing for a smoother effect
+      });
+    }
+
+    // Clean up
+    return () => {
+      if (tiltRef.current) {
+        // @ts-ignore - vanilla-tilt doesn't export the destroy method in types
+        (tiltRef.current as any)._vanillaTilt?.destroy();
+      }
+    };
+  }, []);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -69,70 +61,61 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
 
   return (
     <Link href={`/project/${item.id}`}>
-      <motion.article 
-        className="portfolio-item bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg interactive transform-gpu transition-all duration-500 hover:z-10 cursor-pointer"
+      <motion.div
+        ref={containerRef}
+        className="portfolio-item-container h-64 mb-6"
         variants={itemVariants}
         animate="visible"
         initial="hidden"
         whileHover={shakeAnimation}
-        ref={ref}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          rotateX: isHovered ? rotateX : 0,
-          rotateY: isHovered ? rotateY : 0,
-          transformStyle: 'preserve-3d',
-          transform: 'perspective(1000px)',
-          boxShadow: isHovered 
-            ? '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.2)'
-            : '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1)'
-        }}
       >
-        <div className="h-64 overflow-hidden relative group">
-          <div className="absolute inset-0 bg-gradient-to-tl from-[#4169E1]/30 via-[#9370DB]/20 to-[#FF00FF]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-[1]" 
-            style={{ transform: 'translateZ(20px)' }}
-          />
-          
-          <motion.img 
-            src={item.imageSrc} 
-            alt={item.alt} 
-            className="w-full h-full object-cover transition-transform duration-800 ease-in-out group-hover:scale-110"
-            style={{ 
-              x: isHovered ? imgX : 0,
-              y: isHovered ? imgY : 0,
-              transformStyle: 'preserve-3d',
-              transform: 'translateZ(0px)'
-            }}
-          />
-          
-          {/* Title overlay - show on whole item hover */}
-          <motion.div 
-            className="absolute inset-0 z-10 flex flex-col justify-end p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ 
-              transform: 'translateZ(40px)',
-              transformStyle: 'preserve-3d'
-            }}
-          >
-            <motion.h3 
-              className="font-poppins font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
+        <div 
+          ref={tiltRef}
+          className="js-tilt portfolio-item h-full bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transform-gpu transition-all duration-300 hover:z-10 cursor-pointer"
+          style={{
+            transformStyle: 'preserve-3d',
+          }}
+        >
+          <div className="h-full overflow-hidden relative group">
+            {/* Gradient overlay */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-tl from-[#4169E1]/30 via-[#9370DB]/20 to-[#FF00FF]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-[1]" 
+              style={{ transform: 'translateZ(60px)' }}
+            />
+            
+            {/* Thumbnail image */}
+            <img 
+              src={item.imageSrc} 
+              alt={item.alt} 
+              className="w-full h-full object-cover transition-transform duration-800 ease-in-out group-hover:scale-110"
+              style={{ transform: 'translateZ(30px)' }}
+            />
+            
+            {/* Title overlay - show on whole item hover */}
+            <div 
+              className="absolute inset-0 z-10 flex flex-col justify-end p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ transform: 'translateZ(70px)' }}
             >
-              {item.title}
-            </motion.h3>
-            <motion.p 
-              className="text-sm text-gray-300"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.3, delay: 0.2 }}
-            >
-              {item.category}
-            </motion.p>
-          </motion.div>
+              <motion.h3 
+                className="font-poppins font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+              >
+                {item.title}
+              </motion.h3>
+              <motion.p 
+                className="text-sm text-gray-300"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+              >
+                {item.category}
+              </motion.p>
+            </div>
+          </div>
         </div>
-      </motion.article>
+      </motion.div>
     </Link>
   );
 }
