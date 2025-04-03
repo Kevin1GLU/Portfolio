@@ -153,17 +153,45 @@ export default function ProjectDetailPage() {
                   boxShadow: "0 20px 25px -5px rgba(65, 105, 225, 0.2), 0 10px 10px -5px rgba(147, 112, 219, 0.2)" 
                 }}
               >
-                <video 
-                  src={project.videoSrc} 
-                  controls 
-                  poster={project.imageSrc}
-                  className="w-full aspect-video object-cover"
-                  onMouseOver={(e) => e.currentTarget.play()}
-                  onMouseOut={(e) => {
-                    e.currentTarget.pause();
-                    e.currentTarget.currentTime = 0;
-                  }}
-                />
+                <div className="relative w-full aspect-video">
+                  {/* Fallback image in case video can't be loaded */}
+                  <img 
+                    src={project.imageSrc} 
+                    alt={project.alt}
+                    className="w-full h-full object-cover absolute top-0 left-0" 
+                  />
+                  
+                  {/* Video with error handling */}
+                  <video 
+                    className="w-full h-full object-cover absolute top-0 left-0 z-10"
+                    controls 
+                    poster={project.imageSrc}
+                    onMouseOver={(e) => {
+                      try {
+                        e.currentTarget.play().catch(() => {
+                          // Silent catch for browsers that block autoplay
+                        });
+                      } catch (error) {
+                        console.log('Video playback error');
+                      }
+                    }}
+                    onMouseOut={(e) => {
+                      try {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      } catch (error) {
+                        console.log('Video pause error');
+                      }
+                    }}
+                    onError={(e) => {
+                      // Hide video element on error
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  >
+                    <source src={project.videoSrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </motion.div>
 
               <motion.div
