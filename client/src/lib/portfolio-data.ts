@@ -77,16 +77,14 @@ export const projectDetails: ProjectDetail[] = [
     category: "3D Environment Design",
     imageSrc: arcaneThumb,
     alt: "Virtual Set Project",
-    description: "Virtual Set is a fully realized 3D environment designed for a fantasy TV series. This project focused on creating a magical realm with atmospheric lighting, detailed architecture, and immersive visual storytelling elements. The environment was designed to be versatile, allowing for different camera angles and seamless integration with live-action elements.",
+    description: "In this project, we created a virtual set with a dynamic lineup for a tournament themed around League of Legends in Unreal Engine, we worked in teams where everyone had a specific task.\n\nIn this project, I primarily worked on the tech art, such as the blueprints. I created the character selector, developed the shield lineup, and contributed to most of the design of the GUI elements. I also created some Smart Materials.",
     videoSrc: "https://www.youtube.com/embed/InWOXlqGquM",
     images: [
       arcaneThumb,
       "https://images.unsplash.com/photo-1599802737316-461c7a8ae9de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Blender", "Substance Painter", "Unreal Engine", "After Effects"],
-    client: "Arcane Studios",
-    date: "January 2023"
+    technologies: ["Blender", "Unreal Engine", "Substance Painter", "Photoshop"]
   },
   {
     id: 2,

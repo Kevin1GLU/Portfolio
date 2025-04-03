@@ -219,26 +219,7 @@ export default function ProjectDetailPage() {
                   ))}
                 </div>
 
-                {project.client && (
-                  <motion.div
-                    className="mb-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                  >
-                    <span className="text-gray-400 mr-2">Client:</span>
-                    <span className="text-white font-medium">{project.client}</span>
-                  </motion.div>
-                )}
                 
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                >
-                  <span className="text-gray-400 mr-2">Completed:</span>
-                  <span className="text-white font-medium">{project.date}</span>
-                </motion.div>
               </motion.div>
             </div>
 
