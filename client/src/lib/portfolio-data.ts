@@ -92,15 +92,14 @@ export const projectDetails: ProjectDetail[] = [
     category: "Character Design & Animation",
     imageSrc: bossfightThumb,
     alt: "Bossfight Character Design",
-    description: "Bossfight is a character design and animation project for a major fantasy game. This imposing antagonist was modeled, textured, rigged, and animated to create an intimidating presence within the game. Special attention was given to designing memorable silhouettes and combat animations that create tension and excitement during gameplay.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-woman-dancing-in-cyber-punk-style-40839-large.mp4",
+    description: "In this project, we worked on a Bossfight scene based on an online challenge. This project was done in teams of three, where I worked on the monster and helped with the scene in Unreal Engine.\n\nI modeled, sculpted, rigged, and animated the 3D model for this project in Blender. I also did the texturing in Substance Painter. During the process, I created several animations, some of which did not make it into the final product. I also helped with setting up the scene and some basic particle effects in Unreal Engine.",
+    videoSrc: "https://www.youtube.com/embed/BAHKMTgQBLE",
     images: [
       bossfightThumb,
       "https://images.unsplash.com/photo-1551197831-6ab738125013?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1558244402-285bc9c209a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["ZBrush", "Maya", "Substance Painter", "Marvelous Designer", "Unity"],
-    client: "Epic Games",
+    technologies: ["Blender", "Substance Painter", "Unreal Engine"],
     date: "March 2023"
   },
   {
