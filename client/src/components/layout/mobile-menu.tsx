@@ -95,25 +95,25 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             
             <motion.div variants={itemVariants}>
               <Link href="#portfolio">
-                <a onClick={() => handleLinkClick('#portfolio')} className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">
+                <div onClick={() => handleLinkClick('#portfolio')} className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive cursor-pointer">
                   WORK
-                </a>
+                </div>
               </Link>
             </motion.div>
             
             <motion.div variants={itemVariants}>
               <Link href="#about">
-                <a onClick={() => handleLinkClick('#about')} className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive">
+                <div onClick={() => handleLinkClick('#about')} className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive cursor-pointer">
                   ABOUT
-                </a>
+                </div>
               </Link>
             </motion.div>
             
             <motion.div variants={itemVariants}>
               <Link href="#contact">
-                <a onClick={() => handleLinkClick('#contact')} className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive">
+                <div onClick={() => handleLinkClick('#contact')} className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive cursor-pointer">
                   CONTACT
-                </a>
+                </div>
               </Link>
             </motion.div>
           </div>

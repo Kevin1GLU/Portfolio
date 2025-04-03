@@ -8,6 +8,7 @@ import invasionThumb from "@assets/invasion_thumb.png";
 import motorcycleThumb from "@assets/motorcycle_thumb.png";
 import bmwThumb from "@assets/bmw_thumb.png";
 import airplaneThumb from "@assets/airplane_thumb.png";
+import extremeEThumb from "@assets/extreme_e_thumb.png";
 
 export const portfolioItems: PortfolioItem[] = [
   {
@@ -61,10 +62,10 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 8,
-    title: "Sci-Fi Environment",
-    category: "3D World Building",
-    imageSrc: factoryThumb,
-    alt: "Sci-Fi Environment Project"
+    title: "Extreme E",
+    category: "Racing Visualization",
+    imageSrc: extremeEThumb,
+    alt: "Extreme E Racing Project"
   },
   {
     id: 9,
@@ -198,19 +199,19 @@ export const projectDetails: ProjectDetail[] = [
   },
   {
     id: 8,
-    title: "Sci-Fi Environment",
-    category: "3D World Building",
-    imageSrc: factoryThumb,
-    alt: "Sci-Fi Environment Project",
-    description: "Sci-Fi Environment is an expansive world-building project for a futuristic video game. This detailed environment creates an immersive experience through architectural innovation, technological storytelling elements, and atmospheric effects. Special attention was paid to creating a consistent visual language that communicates the world's cultural and technological development.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-mayan-pyramids-in-the-jungle-seen-from-above-4235-large.mp4",
+    title: "Extreme E",
+    category: "Racing Visualization",
+    imageSrc: extremeEThumb,
+    alt: "Extreme E Racing Project",
+    description: "Extreme E is a high-energy racing visualization project for an electric off-road racing series. This project required creating dynamic visuals to showcase these innovative vehicles in challenging environments. The work combines photorealistic vehicle modeling with environmental effects and dramatic lighting to capture the excitement and sustainable mission of the racing series.",
+    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-driving-through-a-forest-road-1626-large.mp4",
     images: [
-      factoryThumb,
-      "https://images.unsplash.com/photo-1604538007193-a09a66c214d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1520275126937-eff5d9adf159?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      extremeEThumb,
+      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1564591111131-48131e118ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Blender", "Maya", "Substance Designer", "Unreal Engine"],
-    client: "Cybernetic Games",
+    technologies: ["Cinema 4D", "Unreal Engine", "After Effects", "DaVinci Resolve"],
+    client: "Extreme E Racing",
     date: "February 2024"
   },
   {

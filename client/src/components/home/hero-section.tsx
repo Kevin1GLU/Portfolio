@@ -169,8 +169,8 @@ export default function HeroSection() {
             }}
           >
             <Link href="#portfolio">
-              <a 
-                className="interactive inline-block bg-transparent border-2 border-[#9370DB] text-white px-8 py-3 rounded-full text-lg font-medium relative overflow-hidden group"
+              <div 
+                className="interactive inline-block bg-transparent border-2 border-[#9370DB] text-white px-8 py-3 rounded-full text-lg font-medium relative overflow-hidden group cursor-pointer"
                 onClick={scrollToPortfolio}
                 style={{
                   backgroundImage: 'linear-gradient(45deg, #4169E1 0%, #9370DB 50%, #FF00FF 100%)',
@@ -188,7 +188,7 @@ export default function HeroSection() {
                 }}
               >
                 <span className="relative z-10">View Work</span>
-              </a>
+              </div>
             </Link>
           </motion.div>
         </motion.div>
@@ -201,11 +201,11 @@ export default function HeroSection() {
         transition={{ delay: 2.2, duration: 0.8 }}
       >
         <Link href="#portfolio">
-          <a onClick={scrollToPortfolio} className="interactive">
+          <div onClick={scrollToPortfolio} className="interactive cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </a>
+          </div>
         </Link>
       </motion.div>
       

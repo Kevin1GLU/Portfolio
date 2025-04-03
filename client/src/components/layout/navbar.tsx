@@ -17,21 +17,21 @@ export default function Navbar() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <a className="text-2xl font-poppins font-bold tracking-wide interactive">
+              <div className="text-2xl font-poppins font-bold tracking-wide interactive cursor-pointer">
                 <span className="text-white">KEVIN'S</span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]">PORTFOLIO</span>
-              </a>
+              </div>
             </Link>
             
             <div className="hidden md:flex space-x-8">
               <Link href="#portfolio">
-                <a className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive">WORK</a>
+                <div className="text-white hover:text-[#9370DB] transition-colors duration-300 interactive cursor-pointer">WORK</div>
               </Link>
               <Link href="#about">
-                <a className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive">ABOUT</a>
+                <div className="text-white hover:text-[#4169E1] transition-colors duration-300 interactive cursor-pointer">ABOUT</div>
               </Link>
               <Link href="#contact">
-                <a className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive">CONTACT</a>
+                <div className="text-white hover:text-[#FF00FF] transition-colors duration-300 interactive cursor-pointer">CONTACT</div>
               </Link>
             </div>
             
