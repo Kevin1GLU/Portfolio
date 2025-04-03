@@ -6,24 +6,64 @@ export default function AboutSection() {
       <motion.div 
         className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#4169E1]/20 filter blur-3xl"
         initial={{ opacity: 0, scale: 0.5, x: 100 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 1.5 }}
+        whileInView={{ 
+          opacity: 1, 
+          scale: 1, 
+          x: 0,
+          y: [0, -30, 20, -10, 0]
+        }}
+        transition={{ 
+          duration: 1.5,
+          y: {
+            duration: 18,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }
+        }}
         viewport={{ once: true, margin: "-100px" }}
       ></motion.div>
       
       <motion.div 
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#9370DB]/15 filter blur-3xl"
         initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.2 }}
+        whileInView={{ 
+          opacity: 1, 
+          scale: 1,
+          x: [0, 30, -20, 10, 0]
+        }}
+        transition={{ 
+          duration: 1.5, 
+          delay: 0.2,
+          x: {
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }
+        }}
         viewport={{ once: true, margin: "-100px" }}
       ></motion.div>
       
       <motion.div 
         className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#FF00FF]/15 filter blur-3xl"
         initial={{ opacity: 0, scale: 0.5, x: -100 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 1.5, delay: 0.3 }}
+        whileInView={{ 
+          opacity: 1, 
+          scale: 1, 
+          x: 0,
+          y: [0, 40, -30, 15, 0] 
+        }}
+        transition={{ 
+          duration: 1.5, 
+          delay: 0.3,
+          y: {
+            duration: 22,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }
+        }}
         viewport={{ once: true, margin: "-100px" }}
       ></motion.div>
       

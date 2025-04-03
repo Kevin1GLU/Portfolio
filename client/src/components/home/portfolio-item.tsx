@@ -20,13 +20,11 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
 
   // Shake animation for hover
   const shakeAnimation = {
-    initial: {},
-    hover: {
-      x: [0, -4, 4, -4, 4, 0],
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut"
-      }
+    x: [0, -5, 5, -4, 4, -3, 3, -2, 2, -1, 1, 0],
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1]
     }
   };
 
@@ -36,33 +34,38 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
       variants={itemVariants}
       animate="visible"
       initial="hidden"
-      whileHover={{
-        x: [0, -4, 4, -4, 4, 0],
-        transition: {
-          duration: 0.5,
-          ease: "easeInOut"
-        }
-      }}
+      whileHover={shakeAnimation}
     >
-      <div className="h-64 overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-tl from-[#4169E1]/30 via-[#9370DB]/20 to-[#FF00FF]/30 opacity-0 transition-opacity duration-500 ease-in-out z-[1] hover:opacity-100" />
+      <div className="h-64 overflow-hidden relative group">
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#4169E1]/30 via-[#9370DB]/20 to-[#FF00FF]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-[1]" />
         
         <motion.img 
           src={item.imageSrc} 
           alt={item.alt} 
-          className="w-full h-full object-cover transition-transform duration-800 ease-in-out"
-          whileHover={{ scale: 1.1 }}
+          className="w-full h-full object-cover transition-transform duration-800 ease-in-out group-hover:scale-110"
           transition={{ duration: 0.8 }}
         />
         
+        {/* Title overlay - show on whole item hover */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/80 to-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          whileHover={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          className="absolute inset-0 z-10 flex flex-col justify-end p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <h3 className="font-poppins font-semibold text-xl">{item.title}</h3>
-          <p className="text-sm text-gray-300">{item.category}</p>
+          <motion.h3 
+            className="font-poppins font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#4169E1] via-[#9370DB] to-[#FF00FF]"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            {item.title}
+          </motion.h3>
+          <motion.p 
+            className="text-sm text-gray-300"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            {item.category}
+          </motion.p>
         </motion.div>
       </div>
     </motion.article>

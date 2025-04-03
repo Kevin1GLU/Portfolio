@@ -4,7 +4,6 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
-import CustomCursor from "@/components/ui/custom-cursor";
 
 function Router() {
   return (
@@ -19,11 +18,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="noise-bg"></div>
-      <CustomCursor />
       <Router />
       <Toaster />
       
-      <style jsx global>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .noise-bg::before {
           content: '';
           position: fixed;
@@ -47,15 +45,6 @@ function App() {
           90% { transform: translate(-1%, 7%); }
         }
         
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-        
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        
         .animate-pulse-slow {
           animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
@@ -64,9 +53,8 @@ function App() {
           font-family: 'Inter', sans-serif;
           background-color: #121212;
           color: #ffffff;
-          cursor: none;
         }
-      `}</style>
+      `}} />
     </QueryClientProvider>
   );
 }

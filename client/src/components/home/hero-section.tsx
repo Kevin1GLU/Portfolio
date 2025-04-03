@@ -25,20 +25,83 @@ export default function HeroSection() {
         <motion.div 
           className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#4169E1]/20 filter blur-3xl"
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          animate={{ 
+            scale: 1, 
+            opacity: 1,
+            x: [0, -30, 20, -10, 0],
+            y: [0, 30, -20, 15, 0]
+          }}
+          transition={{ 
+            duration: 1.5, 
+            delay: 0.3, 
+            ease: "easeOut",
+            x: {
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            },
+            y: {
+              duration: 25,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }
+          }}
         ></motion.div>
         <motion.div 
           className="absolute top-40 right-20 w-96 h-96 rounded-full bg-[#9370DB]/20 filter blur-3xl"
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+          animate={{ 
+            scale: 1, 
+            opacity: 1,
+            x: [0, 40, -30, 20, 0],
+            y: [0, -30, 20, -10, 0]
+          }}
+          transition={{ 
+            duration: 1.5, 
+            delay: 0.5, 
+            ease: "easeOut",
+            x: {
+              duration: 30,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            },
+            y: {
+              duration: 22,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }
+          }}
         ></motion.div>
         <motion.div 
           className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#FF00FF]/15 filter blur-3xl"
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
+          animate={{ 
+            scale: 1, 
+            opacity: 1,
+            x: [0, -20, 40, -10, 0],
+            y: [0, 20, -40, 25, 0]
+          }}
+          transition={{ 
+            duration: 1.5, 
+            delay: 0.7, 
+            ease: "easeOut",
+            x: {
+              duration: 25,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            },
+            y: {
+              duration: 28,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }
+          }}
         ></motion.div>
       </motion.div>
       
