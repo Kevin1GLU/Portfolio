@@ -49,13 +49,13 @@ export default function PortfolioItem({ item }: PortfolioItemProps) {
     }
   };
 
-  // Shake animation for hover - will show when initially hovering
+  // Shake animation for hover - will show when initially hovering (more subtle)
   const shakeAnimation = {
-    x: [0, -5, 5, -4, 4, -3, 3, -2, 2, -1, 1, 0],
+    x: [0, -3, 3, -2, 2, -1, 1, 0],
     transition: {
-      duration: 1,
+      duration: 0.8,
       ease: "easeInOut",
-      times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1]
+      times: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1]
     }
   };
 

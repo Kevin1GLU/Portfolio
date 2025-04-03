@@ -19,8 +19,8 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <Link href="/">
-            <motion.a 
-              className="text-2xl font-poppins font-bold tracking-wide interactive inline-block"
+            <motion.div 
+              className="text-2xl font-poppins font-bold tracking-wide interactive inline-block cursor-pointer"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
@@ -42,7 +42,7 @@ export default function Footer() {
               >
                 PORTFOLIO
               </motion.span>
-            </motion.a>
+            </motion.div>
           </Link>
         </motion.div>
         
