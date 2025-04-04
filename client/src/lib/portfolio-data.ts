@@ -198,7 +198,7 @@ export const projectDetails: ProjectDetail[] = [
       "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1564591111131-48131e118ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Unreal Engine 5", "Gaea", "Quixelbridge"],
+    technologies: ["Unreal Engine 5", "Gaea", "Blender"],
     date: "February 2024"
   },
   {
