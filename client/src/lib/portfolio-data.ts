@@ -55,10 +55,10 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 7,
-    title: "Airplane Design",
+    title: "Warplanes",
     category: "Vehicle Modeling",
-    imageSrc: airplaneThumb,
-    alt: "Airplane Design Project"
+    imageSrc: "/attached_assets/warplanes_thumb.png",
+    alt: "Warplanes Project"
   },
   {
     id: 8,
