@@ -174,7 +174,7 @@ export const projectDetails: ProjectDetail[] = [
     category: "Vehicle Modeling",
     imageSrc: "/attached_assets/warplanes_thumb.png",
     alt: "Warplanes Project",
-    description: "Warplanes is a comprehensive 3D modeling project showcasing military aircraft design. The project demonstrates advanced modeling techniques, realistic texturing, and dynamic environment integration.",
+    description: "In this project, I worked on a scene with a Warplane as hero asset. This was a solo project, where I made forest environment with quixelbridge and modeled and textured the plane from scratch.\n\nThe plane is a Martin B-26 Marauder. It was a fast, twin-engine bomber used by the U.S. in World War II. It flew mostly in Europe and the Pacific, dropping bombs on enemy targets. By the end of the war, it became known for accurate bombing and having fewer losses in combat.",
     videoSrc: "https://www.youtube.com/embed/kd7MUfb-Cbc",
     images: [
       "/attached_assets/warplanes_thumb.png",
