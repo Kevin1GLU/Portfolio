@@ -170,19 +170,18 @@ export const projectDetails: ProjectDetail[] = [
   },
   {
     id: 7,
-    title: "Airplane Design",
+    title: "Warplanes",
     category: "Vehicle Modeling",
-    imageSrc: airplaneThumb,
-    alt: "Airplane Design Project",
-    description: "Airplane Design is a comprehensive 3D modeling project for a next-generation aircraft concept. The project involved aerodynamic research, technical blueprint development, and detailed 3D execution. The final visualization showcases both exterior aesthetics and interior cabin design with attention to real-world engineering constraints.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-blue-ink-swirling-in-water-21808-large.mp4",
+    imageSrc: "/attached_assets/warplanes_thumb.png",
+    alt: "Warplanes Project",
+    description: "Warplanes is a comprehensive 3D modeling project showcasing military aircraft design. The project demonstrates advanced modeling techniques, realistic texturing, and dynamic environment integration.",
+    videoSrc: "https://www.youtube.com/embed/kd7MUfb-Cbc",
     images: [
-      airplaneThumb,
+      "/attached_assets/warplanes_thumb.png",
       "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1518224973136-3d7ca12c832a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["SolidWorks", "Blender", "Keyshot", "Substance Painter"],
-    client: "Aviation Design Inc.",
+    technologies: ["Blender", "Substance Painter", "After Effects"],
     date: "December 2023"
   },
   {
