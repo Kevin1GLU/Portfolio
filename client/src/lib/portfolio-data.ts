@@ -191,15 +191,14 @@ export const projectDetails: ProjectDetail[] = [
     category: "Racing Visualization",
     imageSrc: extremeEThumb,
     alt: "Extreme E Racing Project",
-    description: "Extreme E is a high-energy racing visualization project for an electric off-road racing series. This project required creating dynamic visuals to showcase these innovative vehicles in challenging environments. The work combines photorealistic vehicle modeling with environmental effects and dramatic lighting to capture the excitement and sustainable mission of the racing series.",
-    videoSrc: "https://assets.mixkit.co/videos/preview/mixkit-driving-through-a-forest-road-1626-large.mp4",
+    description: "'Extreme E' was an assignment we had to make for school using Unreal Engine 5. We were tasked with creating a realtime digital environment, being provided a car which we had to manually rig and animate. A lot of teamwork and storyboarding went into this project, together with 2 classmates.\n\nI was responsible for the desert and the factory scenes, I made the desert map using Gaea and importing it in Unreal. I then added foliage and some details from Quixelbridge. I downloaded the factory map and changed a few things to make a nice scene for the car. I rigged the car and animated it using a splinetool in unreal. In the end I added some dust particles for a better effect.",
+    videoSrc: "https://www.youtube.com/embed/2wlNoVFcmbs",
     images: [
       extremeEThumb,
       "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1564591111131-48131e118ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     ],
-    technologies: ["Cinema 4D", "Unreal Engine", "After Effects", "DaVinci Resolve"],
-    client: "Extreme E Racing",
+    technologies: ["Unreal Engine 5", "Gaea", "Quixelbridge"],
     date: "February 2024"
   },
   {
